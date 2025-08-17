@@ -11,6 +11,13 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+@app.get("/")
+def root():
+    return {
+        "status": "API is live!",
+        "usage": "/parcel_summary?pin=123456789 or /parcel_summary?pins=123456789,987654321"
+    }
+
 @app.get("/parcel_summary")
 def parcel_summary(
     pins: str = Query(None, description="Comma-separated parcel numbers"),
