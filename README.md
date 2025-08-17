@@ -31,3 +31,22 @@ This is a FastAPI service deployed on Vercel that integrates Metro Nashville's P
 ## 🛠 Usage Examples
 
 **Single parcel:**
+# Metro Parcel ChatGPT
+
+This project integrates Metro Nashville's Parcel Viewer data with ChatGPT using a FastAPI app deployed on Vercel.
+
+---
+
+## 🚀 Deployment on Vercel
+The FastAPI app is located in the `api/` folder.  
+Vercel automatically deploys endpoints under `/api/`.
+
+---
+
+## 🔎 Example API Usage
+
+Get a parcel summary by PIN:
+
+```bash
+curl "https://metro-parcel-chatgpt.vercel.app/api/parcel_summary?pins=09408003000"
+
