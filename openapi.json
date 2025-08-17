@@ -7,7 +7,7 @@
   },
   "servers": [
     {
-      "url": "https://metro-parcel-chatgpt.vercel.app"
+      "url": "https://metro-parcel-chatgpt.vercel.app/api"
     }
   ],
   "paths": {
