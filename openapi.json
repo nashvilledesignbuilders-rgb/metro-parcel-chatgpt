@@ -1,0 +1,39 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Metro Nashville Parcel ChatGPT API",
+    "description": "Fetches and summarizes one or more Metro Nashville parcels by PINs.",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://metro-parcel-chatgpt.vercel.app"
+    }
+  ],
+  "paths": {
+    "/parcel_summary": {
+      "get": {
+        "operationId": "get_parcel_summaries",
+        "summary": "Get parcel summaries",
+        "description": "Fetch and summarize one or more Metro Nashville parcels by PINs.",
+        "parameters": [
+          {
+            "name": "pins",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "123456789,987654321"
+            },
+            "description": "One or more Metro Nashville parcel numbers (PINs), comma-separated."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Parcel summaries returned successfully"
+          }
+        }
+      }
+    }
+  }
+}
